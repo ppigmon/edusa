@@ -1,0 +1,15 @@
+{
+  "name": "edusa",
+  "version": "1.0.0",
+  "description": "Website for Extreme Dreams USA non-profit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/ppigmon/edusa"
+  },
+  "author": "",
+  "license": "ISC"
+}
