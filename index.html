@@ -30,7 +30,7 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="./CSS/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Extreme Dreams USA</title>
   </head>
@@ -45,19 +45,19 @@
       <section id="splide-nav" class="splide" aria-label="Splide for navigation">
         <div class="splide__track">
           <ul class="splide__list">
-            <li class="splide__slide">Home</li>
-            <li class="splide__slide">About Us</li>
-            <li class="splide__slide">Events</li>
-            <li class="splide__slide">How to Help</li>
-            <li class="splide__slide">Gallery</li>
-            <li class="splide__slide">Contact Us</li>
+            <li class="splide__slide nav-slide">Home</li>
+            <li class="splide__slide nav-slide">About Us</li>
+            <li class="splide__slide nav-slide">News & Events</li>
+            <li class="splide__slide nav-slide">How to Help</li>
+            <li class="splide__slide nav-slide">Gallery</li>
+            <li class="splide__slide nav-slide">Contact Us</li>
           </ul>
         </div>
       </section>
 
 
       <div class="donate-btn-container" id="donate-btn-container">
-        <a href=""><button>Make a donation!</button></a>
+        <a href=""><button class="donate-btn">Make a donation!</button></a>
       </div>
     </header>
     <!-- SECTIONS AS SLIDES FOR CAROUSEL EFFECT -->
@@ -65,47 +65,88 @@
         <div class="splide__track">
          <ul class="splide__list">
           <li class="splide__slide">
-            <section>
-              <h1>Home</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto quaerat, doloremque quos corrupti aliquid nesciunt a doloribus molestiae alias at aperiam consectetur obcaecati iste explicabo. Obcaecati recusandae quasi eveniet aut est corrupti tempora mollitia voluptates repudiandae vero maiores, dolorem ullam eligendi blanditiis! Tenetur, porro hic natus doloremque itaque labore!</p>
+            <section class="home-section">
+              <h1>Extreme Dreams USA</h1>
+              <p>Helping youths unlock their creativity  and positive expression through the multiple aspects of music production </p>
             </section>
           </li>
           <li class="splide__slide">
-            <section>
+            <section class="about-section">
               <h1>About Us</h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto quaerat, doloremque quos corrupti aliquid nesciunt a doloribus molestiae alias at aperiam consectetur obcaecati iste explicabo. Obcaecati recusandae quasi eveniet aut est corrupti tempora mollitia voluptates repudiandae vero maiores, dolorem ullam eligendi blanditiis! Tenetur, porro hic natus doloremque itaque labore!</p>
             </section>
           </li>
           <li class="splide__slide">
-            <section>
-              <h1>Events</h1>
+            <section class="event-section">
+              <h1>News & Events</h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto quaerat, doloremque quos corrupti aliquid nesciunt a doloribus molestiae alias at aperiam consectetur obcaecati iste explicabo. Obcaecati recusandae quasi eveniet aut est corrupti tempora mollitia voluptates repudiandae vero maiores, dolorem ullam eligendi blanditiis! Tenetur, porro hic natus doloremque itaque labore!</p>
             </section>
           </li>
           <li class="splide__slide">
-            <section>
+            <section class="help-section">
               <h1>How to Help</h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto quaerat, doloremque quos corrupti aliquid nesciunt a doloribus molestiae alias at aperiam consectetur obcaecati iste explicabo. Obcaecati recusandae quasi eveniet aut est corrupti tempora mollitia voluptates repudiandae vero maiores, dolorem ullam eligendi blanditiis! Tenetur, porro hic natus doloremque itaque labore!</p>
             </section>
           </li>
           <li class="splide__slide">
-            <section>
+            <section class="gallery-section">
               <h1>Gallery</h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto quaerat, doloremque quos corrupti aliquid nesciunt a doloribus molestiae alias at aperiam consectetur obcaecati iste explicabo. Obcaecati recusandae quasi eveniet aut est corrupti tempora mollitia voluptates repudiandae vero maiores, dolorem ullam eligendi blanditiis! Tenetur, porro hic natus doloremque itaque labore!</p>
             </section>
           </li>
           <li class="splide__slide">
-            <section>
-              <h1>Contact Us</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto quaerat, doloremque quos corrupti aliquid nesciunt a doloribus molestiae alias at aperiam consectetur obcaecati iste explicabo. Obcaecati recusandae quasi eveniet aut est corrupti tempora mollitia voluptates repudiandae vero maiores, dolorem ullam eligendi blanditiis! Tenetur, porro hic natus doloremque itaque labore!</p>
-            </section>
+            <section class="contact-section">
+              <h1>Contact us</h1>
+              <div class="contact-container">
+
+                <div class="contact-form-left">
+                  <form class="contact-form" action="" method="post">
+                    
+                    
+                    <input class="input-style" type="text" placeholder="Name" required>
+                    
+                    <input class="input-style" type="email" placeholder="Email" required>
+
+                    <textarea name="message" id="text-area"  cols="30" rows="10" >Message...
+                    </textarea>
+
+                    <button class="btn btn-primary send-button" id="submit" type="submit">
+                      <div class="alt-send-button">
+                        <i class="fa-solid fa-paper-plane">SEND</i>
+                      </div>
+                    </button>
+
+
+                  </form>
+                </div>
+
+                <div class="contact-form contact-right">
+                  <ul class="contact-info">
+                    <li><i class="fa-solid fa-location-dot"></i><span>Memphis, TN</span></li>
+                    <li><i class="fa-solid fa-phone"></i><span><a href="tel:+1-901-603-6390">(901) 603-9390</a></span></li>
+                    <li><i class="fa-solid fa-envelope"></i><span><a href="mailto:">Connect@extremedreamsusa.org</a></span></li>
+                  </ul>
+
+                  <hr>
+                  <ul class="social-links">
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                  </ul>
+                  <hr>
+                </div>
+              </div>
+            </section>          
+              
           </li>
-         </ul>
-        </div>
+        </ul>
+      </div>
     </div>
-    <!-- FOOTER -->
     <footer>&#169 Extreme Dreams USA</footer>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!-- FOOTER -->
+    <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <script src="./JS/index.js"></script>
   </body>
 </html>

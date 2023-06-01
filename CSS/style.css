@@ -1,4 +1,27 @@
+/* 
+This website utilizes the Splide.js framework. So any changes made should also be checked with the styleings made under the index.js file within the Splide object. 
+
+Splides documentation can be found at https://splidejs.com/documents/
+*/
+
+
+
 /* ***** GLOBAL CSS ***** */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+:root {
+    --RED: #cc0000 ;
+    --SEC-RED: #990000;
+    --BLUE: #0b5394;
+    --SEC-BLUE: #073763;
+    --WHITE: #fff;
+    --BLACK: #000;
+    --GREY: #dedede;
+}
+
 
 * {
     padding: 0;
@@ -7,20 +30,135 @@
 }
 
 body {
-    max-width: 2000px;
+    margin: 0 auto;
+    color: white;
+    font-family: 'Rubik';
 }
 
-/* ***** HEADER ***** */
+li {
+    list-style: none;
+}
 
+/* 
+HEADER SECTION
+
+Below are the styleing for the HEADER section that contains the LOGO, NAV-BAR, and DONATION button
+
+*/
+
+/* HEADER SECTION */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    width: 100%;
+    margin: 0 auto;
 }
 
+/* 
+*****LOGO
+ */
+.logo-container  {
+    padding: 25px;
+}
 .logo-container img {
     height: 100px;
+    width: auto;
+    
 }
+
+/* 
+*****NAV-BAR
+ */
+#splide-nav {
+    width: 100%;
+}
+
+#splide-nav div {
+    width: 100%;
+}
+
+#splide-nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+#splide-nav li { 
+    padding: 15px;
+}
+
+/* ******************************************
+CSS style changes to Splide.js "is active" 
+that outlined the focused navigation
+*********************************************/
+
+.splide__track--nav>.splide__list>.splide__slide {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    opacity: .5;
+    /* font-family: 'Rubik'; */
+    font-family: 'Russo One', sans-serif;
+}
+
+.splide__track--nav>.splide__list>.splide__slide.is-active {
+    color: #ffffff;
+    /* font-family: 'Rubik'; */
+    font-family: 'Russo One', sans-serif;
+   font-size: 2.5rem;
+   opacity: 1;
+   transition: opacity 400ms ease-in;
+}
+
+/* 
+Adds the border bottom animated effect
+*/
+.splide__track--nav>.splide__list>.splide__slide::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 600ms ease-in-out;
+}
+.splide__track--nav>.splide__list>.splide__slide.is-active::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+/* DONATION  BUTTON*/
+
+.donate-btn {
+    box-shadow: 0px -1px 37px -2px #ffffff;
+	background-color:#0b5494;
+	border-radius:16px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:inherit;
+	font-size:15px;
+	font-weight:bold;
+	padding:13px 32px;
+    margin-right: 1vw;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #000000;
+}
+
+.donate-btn:hover {
+    background-color: #073763;
+    transform: scale(1.1);
+    transition: transform 300ms ease-in-out;
+}
+
 
 
 /* ***** SECTIONS ***** */
@@ -31,10 +169,165 @@ header {
     justify-content: center;
     align-items: center;
     padding: 150px;
+
 }
+
+section {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* 
+*****HOME or HERO section
+*/
+.home-section {
+    background-image:  linear-gradient(#990000ce, #99000049), url('/imgs/tmp-imgs/tmp6.jpg');
+}
+
+.home-section h1 {
+    font-size: 5rem;
+}
+.home-section p {
+    font-size: 2rem;
+    margin: 150px 50px;
+    padding: 50px;
+    text-align:center;
+}
+
+/* 
+*****ABOUT Section
+*/
+.about-section {
+    background-image:  linear-gradient(#dedede85, rgba(222, 222, 222, 0.26)), url('/imgs/tmp-imgs/tmp2.jpg');
+}
+
+/* 
+*****NEWS and EVENTS Section
+*/
+.event-section {
+    background-image:  linear-gradient(#073763c9, #07376344), url('/imgs/tmp-imgs/tmp3.jpg');
+}
+
+/* 
+*****HELP Section
+*/
+.help-section {
+    background-image:  linear-gradient(#990000ce, #99000049), url('/imgs/tmp-imgs/tmp4.jpg');
+}
+
+/* 
+*****GALLERY Section
+*/
+.gallery-section {
+    background-image:  linear-gradient(#dedede85, rgba(222, 222, 222, 0.26)), url('/imgs/tmp-imgs/tmp5.jpg');
+}
+
+/* 
+*****CONTACT Section
+*/
+.contact-section {
+    background-image:  linear-gradient(#073763c9, #07376344), url('/imgs/tmp-imgs/tmp1.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+.contact-section h1 {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+    font: 300 60px 'Russo one', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.349);
+    border-radius: 15px;
+
+    
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 25px;
+    padding: 20px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--WHITE);
+
+}
+.input-style, textarea {
+    max-width: 500px;
+    font-family: 'Rubik';
+    letter-spacing: 1px;
+    background-color: #000;
+    color: var(--GREY);
+    padding: 5px;
+    font-size: 30px;
+    margin: 10px;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    width: 50%;
+    height: 35px;
+    margin: 0 auto;
+    font-family: 'Rubik';
+    letter-spacing: 2px;
+}
+
+.contact-right {
+    margin: auto 0;
+}
+
+.contact-info li {
+    font-size: 1.5rem;
+}
+
+.contact-info i {
+    margin: 15px;
+}
+.social-links {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 4rem;
+}
+
+.social-links a {
+    padding: 5px;
+    margin: 10px;
+}
+
+
+hr {
+    margin: 20px 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--WHITE);
+}
+
+
+  
 
 /* ***** FOOTER ***** */
 
 footer {
-    background-color: aqua;
-}
+    position: relative;
+    margin-top: -20px;
+}  
+
+
