@@ -39,6 +39,14 @@ li {
     list-style: none;
 }
 
+section {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+}
+
 /* 
 HEADER SECTION
 
@@ -159,8 +167,6 @@ Adds the border bottom animated effect
     transition: transform 300ms ease-in-out;
 }
 
-
-
 /* ***** SECTIONS ***** */
 
 #splide-main section {
@@ -170,158 +176,7 @@ Adds the border bottom animated effect
     align-items: center;
     padding: 150px;
 
-}
-
-section {
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    height: 100%;
-    width: 100%;
-}
-
-
-/* 
-*****HOME or HERO section
-*/
-.home-section {
-    background-image:  linear-gradient(#990000ce, #99000049), url('/imgs/tmp-imgs/tmp6.jpg');
-}
-
-.home-section h1 {
-    font-size: 5rem;
-}
-.home-section p {
-    font-size: 2rem;
-    margin: 150px 50px;
-    padding: 50px;
-    text-align:center;
-}
-
-/* 
-*****ABOUT Section
-*/
-.about-section {
-    background-image:  linear-gradient(#dedede85, rgba(222, 222, 222, 0.26)), url('/imgs/tmp-imgs/tmp2.jpg');
-}
-
-/* 
-*****NEWS and EVENTS Section
-*/
-.event-section {
-    background-image:  linear-gradient(#073763c9, #07376344), url('/imgs/tmp-imgs/tmp3.jpg');
-}
-
-/* 
-*****HELP Section
-*/
-.help-section {
-    background-image:  linear-gradient(#990000ce, #99000049), url('/imgs/tmp-imgs/tmp4.jpg');
-}
-
-/* 
-*****GALLERY Section
-*/
-.gallery-section {
-    background-image:  linear-gradient(#dedede85, rgba(222, 222, 222, 0.26)), url('/imgs/tmp-imgs/tmp5.jpg');
-}
-
-/* 
-*****CONTACT Section
-*/
-.contact-section {
-    background-image:  linear-gradient(#073763c9, #07376344), url('/imgs/tmp-imgs/tmp1.jpg');
-    width: 100%;
-    height: 100%;
-}
-
-.contact-section h1 {
-    text-align: center;
-    margin: 0 auto;
-    padding: 40px 0;
-    font: 300 60px 'Russo one', sans-serif;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-}
-
-.contact-container{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.349);
-    border-radius: 15px;
-
-    
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    margin: 25px;
-    padding: 20px;
-}
-
-input::placeholder, textarea::placeholder {
-    color: var(--WHITE);
-
-}
-.input-style, textarea {
-    max-width: 500px;
-    font-family: 'Rubik';
-    letter-spacing: 1px;
-    background-color: #000;
-    color: var(--GREY);
-    padding: 5px;
-    font-size: 30px;
-    margin: 10px;
-    text-transform: uppercase;
-    border-radius: 10px;
-}
-
-.btn-primary {
-    width: 50%;
-    height: 35px;
-    margin: 0 auto;
-    font-family: 'Rubik';
-    letter-spacing: 2px;
-}
-
-.contact-right {
-    margin: auto 0;
-}
-
-.contact-info li {
-    font-size: 1.5rem;
-}
-
-.contact-info i {
-    margin: 15px;
-}
-.social-links {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 4rem;
-}
-
-.social-links a {
-    padding: 5px;
-    margin: 10px;
-}
-
-
-hr {
-    margin: 20px 0;
-}
-
-a {
-    text-decoration: none;
-    color: var(--WHITE);
-}
-
-
-  
+} 
 
 /* ***** FOOTER ***** */
 
